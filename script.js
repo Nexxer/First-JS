@@ -56,9 +56,14 @@ button.addEventListener("click", function () {
   smoothly(phrase, "textContent", randomElement.text);
   smoothly(image, "src", randomElement.image);
 
-  if (randomElement.length > 40) {
+  if (randomElement.text.length > 40) {
     advice.style.fontSize = "33px";
   } else {
     advice.style.fontSize = "42px";
   }
 });
+
+for (let i = 0; i <= 2; i = i + 1) {
+  smoothly(phrase, "textContent", phrases[i].text);
+  smoothly(image, "src", randomElement[i].image);
+}
